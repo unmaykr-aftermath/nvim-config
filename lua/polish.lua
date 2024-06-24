@@ -6,7 +6,7 @@
 
 -- https://neovide.dev/faq.html
 if vim.g.neovide == true then
-  vim.g.neovide_scale_factor = 0.55
+  vim.g.neovide_scale_factor = 0.7
   vim.api.nvim_set_keymap(
     "n",
     "<C-+>",
@@ -19,7 +19,7 @@ if vim.g.neovide == true then
     ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.05<CR>",
     { silent = true }
   )
-  vim.api.nvim_set_keymap("n", "<C-0>", ":lua vim.g.neovide_scale_factor = 0.55<CR>", { silent = true })
+  vim.api.nvim_set_keymap("n", "<C-0>", ":lua vim.g.neovide_scale_factor = 0.7<CR>", { silent = true })
 end
 
 -- Set up custom filetypes
