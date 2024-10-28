@@ -7,6 +7,13 @@ return {
           "+nightly",
         },
       }
+
+      opts.config.rust_analyzer.settings["rust-analyzer"].inlayHints = {
+        ignoreTraits = {
+          "*::OwoColorize",
+        },
+      }
+
       return opts
     end,
   },
