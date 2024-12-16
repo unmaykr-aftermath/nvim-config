@@ -14,6 +14,12 @@ return {
         },
       }
 
+      opts.config.rust_analyzer.settings["rust-analyzer"].cargo = {
+        features = {
+          "all",
+        },
+      }
+
       return opts
     end,
   },
