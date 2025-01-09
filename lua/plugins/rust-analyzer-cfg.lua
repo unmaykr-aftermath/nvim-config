@@ -11,6 +11,23 @@ return {
           allFeatures = true,
         },
 
+        completion = {
+          autoimport = {
+            exclude = {
+              "tap::Conv",
+              "tap::Pipe",
+              "tap::Tap",
+              "tap::TapFallible",
+              "tap::TapOptional",
+              "tap::TryConv",
+            },
+          },
+          excludeTraits = {
+            "owo_colors::OwoColorize",
+            "color_eyre::owo_colors::OwoColorize",
+          },
+        },
+
         rustfmt = {
           extraArgs = {
             "+nightly",
@@ -19,7 +36,7 @@ return {
 
         inlayHints = {
           ignoreTraits = {
-            "*::OwoColorize",
+            "owo_colors::OwoColorize",
           },
         },
       }
