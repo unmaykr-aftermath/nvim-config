@@ -12,17 +12,11 @@ return {
         },
 
         completion = {
-          autoimport = {
-            exclude = {
-              "tap::Conv",
-              "tap::Pipe",
-              "tap::Tap",
-              "tap::TapFallible",
-              "tap::TapOptional",
-              "tap::TryConv",
-            },
-          },
           excludeTraits = {
+            "core::borrow::Borrow",
+            "core::borrow::BorrowMut",
+            "std::borrow::Borrow",
+            "std::borrow::BorrowMut",
             "owo_colors::OwoColorize",
             "color_eyre::owo_colors::OwoColorize",
           },
@@ -31,12 +25,6 @@ return {
         rustfmt = {
           extraArgs = {
             "+nightly",
-          },
-        },
-
-        inlayHints = {
-          ignoreTraits = {
-            "owo_colors::OwoColorize",
           },
         },
       }
