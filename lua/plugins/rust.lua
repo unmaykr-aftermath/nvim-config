@@ -1,4 +1,5 @@
 return {
+
   {
     "nvim-treesitter/nvim-treesitter",
     optional = true,
@@ -8,12 +9,19 @@ return {
       end
     end,
   },
+
   {
     "AstroNvim/astrolsp",
     optional = true,
     opts = {
       -- handlers = { rust_analyzer = false }, -- disable setup of `rust_analyzer`
-      ---@diagnostic disable: missing-fields
+
+      -- This will use the rust-analyzer installed with the toolchain (or any that's in the PATH?),
+      -- however the current stable version seems to not take `completion.excludeTraits` well
+      -- servers = {
+      --   "rust_analyzer",
+      -- },
+
       config = {
         rust_analyzer = {
           settings = {
@@ -34,6 +42,12 @@ return {
                   "std::borrow::BorrowMut",
                   "owo_colors::OwoColorize",
                   "color_eyre::owo_colors::OwoColorize",
+                  "tap::Conv",
+                  "tap::Pipe",
+                  "tap::Tap",
+                  "tap::TapFallible",
+                  "tap::TapOptional",
+                  "tap::TryConv",
                 },
               },
 
@@ -48,6 +62,7 @@ return {
       },
     },
   },
+
   {
     "Saecki/crates.nvim",
     event = { "BufRead Cargo.toml" },
